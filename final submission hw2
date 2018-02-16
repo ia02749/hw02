@@ -1,0 +1,241 @@
+%CS-113 S18 HW-2
+%Released: 2-Feb-2018
+%Deadline: 16-Feb-2018 7.00 pm
+%Authors: Abdullah Zafar, Emad bin Abid, Moonis Rashid, Abdul Rafay Mehboob, Waqar Saleem.
+
+
+\documentclass[addpoints]{exam}
+
+% Header and footer.
+\pagestyle{headandfoot}
+\runningheadrule
+\runningfootrule
+\runningheader{CS 113 Discrete Mathematics}{Homework II}{Spring 2018}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\firstpageheader{}{}{}
+
+\boxedpoints
+\printanswers
+\usepackage[table]{xcolor}
+\usepackage{amsfonts,graphicx,amsmath,hyperref}
+\usepackage{mathcomp}
+\title{Habib University\\CS-113 Discrete Mathematics\\Spring 2018\\HW 2}
+\author{$<ia02749>$}  % replace with your ID, e.g. oy02945
+\date{Due: 19h, 16th February, 2018}
+
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+
+
+\question
+
+%Short Questions (25)
+
+\begin{parts}
+
+  
+  \part[5] Determine the domain, codomain and set of values for the following function to be \\ 1) partial and\\ 2) total: 
+  \begin{center}
+    $y=\sqrt{x}$
+  \end{center}
+
+  \begin{solution}
+  Domain can be loosely defined as what can go into the function. For this function, domain will be all positive real numbers.
+  
+  Domain $=$ $[1,\infty)$ \\
+  $x \in \mathbb{R}^{+} $
+  
+  Co domain is the set of values that could possibly come out. The Co domain is actually part of the definition of the function. Therefore co domain for this function will be positive real numbers.
+  
+  Co Domain $=$ $[1,\infty)$ \\
+  $x \in \mathbb{R}^{+} $
+    % Write your solution here
+  \end{solution}
+  
+  \part[5] Explain whether $f$ is a function from the set of all bit strings to the set of integers if $f(S)$ is the smallest $i \in \mathbb{Z}$� such that the $i$th bit of S is 1 and $f(S) = 0$ when S is the empty string. 
+  
+  \begin{solution}
+  When S is the empty string, it will have all zeros in a bit-string.
+  This example shows us that it is not a well defined function.
+  
+  For any one particular bit string there can only be one image. Therefore it is a function.
+  
+  It is not a one to one function (Not injective) as more than one bit string can produce same iamge.
+    % Write your solution here
+  \end{solution}
+
+  \part[15] For $X,Y \in S$, explain why (or why not) the following define an equivalence relation on $S$:
+  \begin{subparts}
+    \subpart ``$X$ and $Y$ have been in class together"
+    \subpart ``$X$ and $Y$ rhyme"
+    \subpart ``$X$ is a subset of $Y$"
+  \end{subparts}
+
+  \begin{solution}
+  A relation is only equivalence if it satisfy all the reflexive, symmetric and transitive relations.
+  \begin{subparts}
+   \subpart ``this does not define an equivalence relation. There is one property that is similar to both; both have been in class together. This doesn't mean they are at the same place every time."
+   \subpart ``Does Not define equivalence."
+   \subpart ``Does Not define equivalence."
+  \end{subparts}
+    % Write your solution here
+  \end{solution}
+
+\end{parts}
+
+%Long questions (75)
+\question[15] Let $A = f^{-1}(B)$. Prove that $f(A) \subseteq B$.
+  \begin{solution}
+  if the function f applied to an input x gives a result of y, then applying its inverse function g to y gives the result x, and vice versa.
+  
+  This means that if A is an inverse function of B, then the image of A is the domain of B and the domain of A is the image of B.
+  
+  consider two functions. $f(x)= 2x$ and $f(y)= x/2$. for all positive integers. Here Y is the inverse of X. All the output values to one function will also belong to the output set of the other function.
+  
+  We have to prove that \\
+  $f^{-1}(B) \subseteq B$ \\
+  we are supposing that this is an injective function. 
+  
+  Let $a \in B$. Then $f(a) \in f(B)$ and, by definition, $a \in f^{−1}(B)$. Hence, $f^{−1}(B) \subseteq B$.
+   
+   %Let A be a subset of X. For all x∈A, f(x)∈f(A), i.e., x∈f−1(f(A)). Thus A⊆f−1(f(A))
+  
+    % Write your solution here
+  \end{solution}
+
+\question[15] Consider $[n] = \{1,2,3,...,n\}$ where $n \in \mathbb{N}$. Let $A$ be the set of subsets of $[n]$ that have even size, and let $B$ be the set of subsets of $[n]$ that have odd size. Establish a bijection from $A$ to $B$, thereby proving $|A| = |B|$. (Such a bijection is suggested below for $n = 3$) 
+
+\begin{center}
+
+  \begin{tabular}{ |c || c | c | c |c |}
+    \hline
+ A & $\emptyset$ & $\{2,3\}$ & $\{1,3\}$ & $\{1,2\}$ \\ \hline
+ B & $\{3\}$ & $\{2\}$ & $\{1\}$ & $\{1,2,3\}$\\\hline
+\end{tabular}
+\end{center}
+
+  \begin{solution}
+  Bijection is defined as mapping that is both one to one and onto. It is both injeective and surjective.
+  
+  To prove bijection, we can individualy prove if the two are injective and surjective.
+  
+  When we compare the sets A and B we realize that each subset of one is either dominating the other or is dominated by the other.
+  
+  \{2,3\} dominates \{3\}
+  
+  in this case, A subset is injective to B subset. And when considering the inverse, B is dominated by A, means B is subjective to A. Therefore bijection is proved.
+  
+  For any value of n, the odd set and even set will alwasy over lap in the same way such that every corresponding two sets are bijective.
+    % Write your solution here
+  \end{solution}
+  
+\question Mushrooms play a vital role in the biosphere of our planet. They also have recreational uses, such as in understanding the mathematical series below. A mushroom number, $M_n$, is a figurate number that can be represented in the form of a mushroom shaped grid of points, such that the number of points is the mushroom number. A mushroom consists of a stem and cap, while its height is the combined height of the two parts. Here is $M_5=23$:
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=1.0]{m5_figurate.png}
+  \caption{Representation of $M_5$ mushroom}
+  \label{fig:mushroom_anatomy}
+\end{figure}
+
+We can draw the mushroom that represents $M_{n+1}$ recursively, for $n \geq 1$:
+\[ 
+    M_{n+1}=
+    \begin{cases} 
+      (\textrm{Cap\_width}(M_n) + 1) + (\textrm{Stem\_height}(M_n) + 1) + \textrm{Cap\_height}(M_n)  & n \textrm{ is even} \\
+      (\textrm{Cap\_width}(M_n) + 1) + (\textrm{Stem\_height}(M_n) + 1)  + (\textrm{Cap\_height}(M_n)+1) & n \textrm{ is odd}  \\      
+   \end{cases}
+\]
+
+Study the first five mushrooms carefully and make sure you can draw subsequent ones using the recurrence above.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{mushroom_series.png}
+  \caption{Representation of $M_1,M_2,M_3,M_4,M_5$ mushrooms}
+  \label{fig:mushroom_anatomy}
+\end{figure}
+
+  \begin{parts}
+    \part[15] Derive a closed-form for $M_n$ in terms of $n$.
+  \begin{solution} \\ STEM Formula \\
+  For $n=1$, $M_1$  stem = 0.
+  For $n=2$, $M_2$ cap $=$ 5 and stem = 2.
+  
+  For $n=3$, $M_3$ cap $=$ 7 and stem = 4.
+  
+  the sequence of the stem for $n_1,n_2,n_3,n_4,n_5$ is 0,2,4,6,8. This sequence's general formula would be $2(n-1)$.
+  
+  STEM Formula 
+  
+  For $n=1$, $M_1$ cap $=$ 2
+  
+  For $n=2$, $M_2$ cap $=$ 5
+  
+  For $n=3$, $M_3$ cap $=$ 7
+  
+  the sequence of the stem for $n_1,n_2,n_3,n_4,n_5$ is 2,5,7,13,15
+  
+  $n=1, 2(1)+3(0) = 2, 2(n-0)+3(n-1)$ \\
+  $n=2, 2(1)+3(1) = 5, 2(n-1)+3(n-1)$ \\
+  $n=3, 2(2)+3(1) = 7, 2(n-1)+3(n-2)$ \\
+  $n=4, 2(2)+3(3) = 13, 2(n-2)+3(n-1)$ \\
+  $n=5, 2(3)+3(3) = 15, 2(n-2)+3(n-2)$ \\
+  
+  
+    % Write your solution here
+  \end{solution}
+    \part[5] What is the total height of the $20$th mushroom in the series? 
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+\end{parts}
+
+\question
+    The \href{https://en.wikipedia.org/wiki/Fibonacci_number}{Fibonacci series} is an infinite sequence of integers, starting with $1$ and $2$ and defined recursively after that, for the $n$th term in the array, as $F(n) = F(n-1) + F(n-2)$. In this problem, we will count an interesting set derived from the Fibonacci recurrence.
+    
+The \href{http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibGen.html#section6.2}{Wythoff array} is an infinite 2D-array of integers where the $n$th row is formed from the Fibonnaci recurrence using starting numbers $n$ and $\left \lfloor{\phi\cdot (n+1)}\right \rfloor$ where $n \in \mathbb{N}$ and $\phi$ is the \href{https://en.wikipedia.org/wiki/Golden_ratio}{golden ratio} $1.618$ (3 sf).
+
+\begin{center}
+\begin{tabular}{c c c c c c c c}
+ \cellcolor{blue!25}1 & 2 & 3 & 5 & 8 & 13 & 21 & $\cdots$\\
+ 4 & \cellcolor{blue!25}7 & 11 & 18 & 29 & 47 & 76 & $\cdots$\\
+ 6 & 10 & \cellcolor{blue!25}16 & 26 & 42 & 68 & 110 & $\cdots$\\
+ 9 & 15 & 24 & \cellcolor{blue!25}39 & 63 & 102 & 165 & $\cdots$ \\
+ 12 & 20 & 32 & 52 & \cellcolor{blue!25}84 & 136 & 220 & $\cdots$ \\
+ 14 & 23 & 37 & 60 & 97 & \cellcolor{blue!25}157 & 254 & $\cdots$\\
+ 17 & 28 & 45 & 73 & 118 & 191 & \cellcolor{blue!25}309 & $\cdots$\\
+ $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & \color{blue}$\ddots$\\
+ 
+
+\end{tabular}
+\end{center}
+
+\begin{parts}
+  \part[10] To begin, prove that the Fibonacci series is countable.
+ 
+    \begin{solution}
+    According to standard definition; a countable set is a set with the same cardinality (number of elements) as some subset of the set of natural numbers. A countable set is either a finite set or a countably infinite set
+    
+    Natural numbers are positive whole numbers. They start from 1 mostly.
+    
+    Fibonacci is a subset of Natural Numbers, therefore it is countable.
+    
+    If we talk about a range of Fibonacci numbers, from $n_{1}$ to $n_{13}$, we can list down all the Fibonacci numbers in between.
+    
+    % Write your solution here
+  \end{solution}
+  \part[15] Consider the Modified Wythoff as any array derived from the original, where each entry of the leading diagonal (marked in blue) of the original 2D-Array is replaced with an integer that does not occur in that row. Prove that the Wythoff Array is countable. 
+
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+\end{parts}
+
+\end{questions}
+
+\end{document}
